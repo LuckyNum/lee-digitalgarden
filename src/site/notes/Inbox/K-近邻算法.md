@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/inbox/k/"}
+{"dg-publish":true,"permalink":"/Inbox/K-近邻算法/"}
 ---
 
 ## 1 什么是K-近邻算法
