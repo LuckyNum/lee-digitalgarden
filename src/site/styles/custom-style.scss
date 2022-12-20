@@ -1,13 +1,484 @@
-body {
-    /***
-      ADD YOUR CUSTOM STYLIING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-   ***/
-    //  background-color: white;
-    //  .content {
-    //   font-size: 14px;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+/* 标题前的 # 为等宽(monospace)字体 */
+:root {
+  /* 粗体的字重 100 ~ 900 ，400为正常粗细，具体生效需要字体支持*/
+  --font-bold: bold;
+  /* 标题的颜色 */
+  --h1-color: #ea572a;
+  --h2-color: #ee9b00;
+  --h3-color: #57c302;
+  --h4-color: #0993d3;
+  --h5-color: #9084e9;
+  --h6-color: #bc61ad;
+  /* 标题的字号 */
+  --h1-size: 2rem;
+  --h2-size: 1.8rem;
+  --h3-size: 1.6rem;
+  --h4-size: 1.4rem;
+  --h5-size: 1.3rem;
+  --h6-size: 1.2rem;
+  /* 标题的字重 */
+  --h1-weight: var(--font-bold);
+  --h2-weight: var(--font-bold);
+  --h3-weight: var(--font-bold);
+  --h4-weight: var(--font-bold);
+  --h5-weight: var(--font-bold);
+  --h6-weight: var(--font-bold);
+  /* 动画控制 */
+  --transition: all 0.3s ease-in-out;
+}
+
+h1 {
+  color: var(--h1-color) !important;
+  font-size: var(--h1-size) !important;
+  font-weight: var(--h1-weight) !important;
+  line-height: 1.5;
+}
+
+.markdown-preview-view .cm-header-1,
+.cm-editor .cm-header-1 {
+  color: var(--h1-color) !important;
+  font-size: var(--h1-size) !important;
+  font-weight: var(--h1-weight) !important;
+}
+.markdown-preview-view .HyperMD-header-1,
+.cm-editor .HyperMD-header-1 {
+  padding: 4px 0 !important;
+  line-height: calc(var(--h1-size) * 1.4);
+}
+.is-live-preview .HyperMD-header-1,
+.workspace-leaf-content[data-type="markdown"] h1 {
+  position: relative;
+  margin: calc(var(--h1-size) / 3) 0;
+}
+.is-live-preview .HyperMD-header-1::before,
+.workspace-leaf-content[data-type="markdown"] h1::before {
+  position: absolute;
+  border: 2px solid var(--h1-color);
+  border-radius: 4px;
+  z-index: 1;
+  padding-top: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: 0.6rem;
+  font-weight: var(--font-bold);
+  height: 0.6rem;
+  line-height: 0.6rem;
+  content: "H1";
+  opacity: 0;
+  transition: var(--transition);
+  top: 48%;
+  transform: translateY(-50%);
+  left: -20px;
+}
+.is-live-preview .HyperMD-header-1:hover::before,
+.workspace-leaf-content[data-type="markdown"] h1:hover::before {
+  transition: var(--transition);
+  opacity: 0.8;
+}
+
+.is-live-preview .HyperMD-header-1 {
+  padding-left: 4px !important;
+}
+
+.theme-light .is-live-preview .HyperMD-header-1::before,
+.theme-light .workspace-leaf-content[data-type="markdown"] h1::before {
+  color: var(--h1-color);
+}
+
+.theme-dark .is-live-preview .HyperMD-header-1::before,
+.theme-dark .workspace-leaf-content[data-type="markdown"] h1::before {
+  background-color: var(--h1-color);
+  color: #fff;
+}
+
+h2 {
+  color: var(--h2-color) !important;
+  font-size: var(--h2-size) !important;
+  font-weight: var(--h2-weight) !important;
+  line-height: 1.5;
+}
+
+.markdown-preview-view .cm-header-2,
+.cm-editor .cm-header-2 {
+  color: var(--h2-color) !important;
+  font-size: var(--h2-size) !important;
+  font-weight: var(--h2-weight) !important;
+}
+.markdown-preview-view .HyperMD-header-2,
+.cm-editor .HyperMD-header-2 {
+  padding: 4px 0 !important;
+  line-height: calc(var(--h2-size) * 1.4);
+}
+.is-live-preview .HyperMD-header-2,
+.workspace-leaf-content[data-type="markdown"] h2 {
+  position: relative;
+  margin: calc(var(--h2-size) / 3) 0;
+}
+.is-live-preview .HyperMD-header-2::before,
+.workspace-leaf-content[data-type="markdown"] h2::before {
+  position: absolute;
+  border: 2px solid var(--h2-color);
+  border-radius: 4px;
+  z-index: 1;
+  padding-top: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: 0.6rem;
+  font-weight: var(--font-bold);
+  height: 0.6rem;
+  line-height: 0.6rem;
+  content: "H2";
+  opacity: 0;
+  transition: var(--transition);
+  top: 48%;
+  transform: translateY(-50%);
+  left: -20px;
+}
+.is-live-preview .HyperMD-header-2:hover::before,
+.workspace-leaf-content[data-type="markdown"] h2:hover::before {
+  transition: var(--transition);
+  opacity: 0.8;
+}
+
+.is-live-preview .HyperMD-header-2 {
+  padding-left: 4px !important;
+}
+
+.theme-light .is-live-preview .HyperMD-header-2::before,
+.theme-light .workspace-leaf-content[data-type="markdown"] h2::before {
+  color: var(--h2-color);
+}
+
+.theme-dark .is-live-preview .HyperMD-header-2::before,
+.theme-dark .workspace-leaf-content[data-type="markdown"] h2::before {
+  background-color: var(--h2-color);
+  color: #fff;
+}
+
+h3 {
+  color: var(--h3-color) !important;
+  font-size: var(--h3-size) !important;
+  font-weight: var(--h3-weight) !important;
+  line-height: 1.5;
+}
+
+.markdown-preview-view .cm-header-3,
+.cm-editor .cm-header-3 {
+  color: var(--h3-color) !important;
+  font-size: var(--h3-size) !important;
+  font-weight: var(--h3-weight) !important;
+}
+.markdown-preview-view .HyperMD-header-3,
+.cm-editor .HyperMD-header-3 {
+  padding: 4px 0 !important;
+  line-height: calc(var(--h3-size) * 1.4);
+}
+.is-live-preview .HyperMD-header-3,
+.workspace-leaf-content[data-type="markdown"] h3 {
+  position: relative;
+  margin: calc(var(--h3-size) / 3) 0;
+}
+.is-live-preview .HyperMD-header-3::before,
+.workspace-leaf-content[data-type="markdown"] h3::before {
+  position: absolute;
+  border: 2px solid var(--h3-color);
+  border-radius: 4px;
+  z-index: 1;
+  padding-top: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: 0.6rem;
+  font-weight: var(--font-bold);
+  height: 0.6rem;
+  line-height: 0.6rem;
+  content: "H3";
+  opacity: 0;
+  transition: var(--transition);
+  top: 48%;
+  transform: translateY(-50%);
+  left: -20px;
+}
+.is-live-preview .HyperMD-header-3:hover::before,
+.workspace-leaf-content[data-type="markdown"] h3:hover::before {
+  transition: var(--transition);
+  opacity: 0.8;
+}
+
+.is-live-preview .HyperMD-header-3 {
+  padding-left: 4px !important;
+}
+
+.theme-light .is-live-preview .HyperMD-header-3::before,
+.theme-light .workspace-leaf-content[data-type="markdown"] h3::before {
+  color: var(--h3-color);
+}
+
+.theme-dark .is-live-preview .HyperMD-header-3::before,
+.theme-dark .workspace-leaf-content[data-type="markdown"] h3::before {
+  background-color: var(--h3-color);
+  color: #fff;
+}
+
+h4 {
+  color: var(--h4-color) !important;
+  font-size: var(--h4-size) !important;
+  font-weight: var(--h4-weight) !important;
+  line-height: 1.5;
+}
+
+.markdown-preview-view .cm-header-4,
+.cm-editor .cm-header-4 {
+  color: var(--h4-color) !important;
+  font-size: var(--h4-size) !important;
+  font-weight: var(--h4-weight) !important;
+}
+.markdown-preview-view .HyperMD-header-4,
+.cm-editor .HyperMD-header-4 {
+  padding: 4px 0 !important;
+  line-height: calc(var(--h4-size) * 1.4);
+}
+.is-live-preview .HyperMD-header-4,
+.workspace-leaf-content[data-type="markdown"] h4 {
+  position: relative;
+  margin: calc(var(--h4-size) / 3) 0;
+}
+.is-live-preview .HyperMD-header-4::before,
+.workspace-leaf-content[data-type="markdown"] h4::before {
+  position: absolute;
+  border: 2px solid var(--h4-color);
+  border-radius: 4px;
+  z-index: 1;
+  padding-top: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: 0.6rem;
+  font-weight: var(--font-bold);
+  height: 0.6rem;
+  line-height: 0.6rem;
+  content: "H4";
+  opacity: 0;
+  transition: var(--transition);
+  top: 48%;
+  transform: translateY(-50%);
+  left: -20px;
+}
+.is-live-preview .HyperMD-header-4:hover::before,
+.workspace-leaf-content[data-type="markdown"] h4:hover::before {
+  transition: var(--transition);
+  opacity: 0.8;
+}
+
+.is-live-preview .HyperMD-header-4 {
+  padding-left: 4px !important;
+}
+
+.theme-light .is-live-preview .HyperMD-header-4::before,
+.theme-light .workspace-leaf-content[data-type="markdown"] h4::before {
+  color: var(--h4-color);
+}
+
+.theme-dark .is-live-preview .HyperMD-header-4::before,
+.theme-dark .workspace-leaf-content[data-type="markdown"] h4::before {
+  background-color: var(--h4-color);
+  color: #fff;
+}
+
+h5 {
+  color: var(--h5-color) !important;
+  font-size: var(--h5-size) !important;
+  font-weight: var(--h5-weight) !important;
+  line-height: 1.5;
+}
+
+.markdown-preview-view .cm-header-5,
+.cm-editor .cm-header-5 {
+  color: var(--h5-color) !important;
+  font-size: var(--h5-size) !important;
+  font-weight: var(--h5-weight) !important;
+}
+.markdown-preview-view .HyperMD-header-5,
+.cm-editor .HyperMD-header-5 {
+  padding: 4px 0 !important;
+  line-height: calc(var(--h5-size) * 1.4);
+}
+.is-live-preview .HyperMD-header-5,
+.workspace-leaf-content[data-type="markdown"] h5 {
+  position: relative;
+  margin: calc(var(--h5-size) / 3) 0;
+}
+.is-live-preview .HyperMD-header-5::before,
+.workspace-leaf-content[data-type="markdown"] h5::before {
+  position: absolute;
+  border: 2px solid var(--h5-color);
+  border-radius: 4px;
+  z-index: 1;
+  padding-top: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: 0.6rem;
+  font-weight: var(--font-bold);
+  height: 0.6rem;
+  line-height: 0.6rem;
+  content: "H5";
+  opacity: 0;
+  transition: var(--transition);
+  top: 48%;
+  transform: translateY(-50%);
+  left: -20px;
+}
+.is-live-preview .HyperMD-header-5:hover::before,
+.workspace-leaf-content[data-type="markdown"] h5:hover::before {
+  transition: var(--transition);
+  opacity: 0.8;
+}
+
+.is-live-preview .HyperMD-header-5 {
+  padding-left: 4px !important;
+}
+
+.theme-light .is-live-preview .HyperMD-header-5::before,
+.theme-light .workspace-leaf-content[data-type="markdown"] h5::before {
+  color: var(--h5-color);
+}
+
+.theme-dark .is-live-preview .HyperMD-header-5::before,
+.theme-dark .workspace-leaf-content[data-type="markdown"] h5::before {
+  background-color: var(--h5-color);
+  color: #fff;
+}
+
+h6 {
+  color: var(--h6-color) !important;
+  font-size: var(--h6-size) !important;
+  font-weight: var(--h6-weight) !important;
+  line-height: 1.5;
+}
+
+.markdown-preview-view .cm-header-6,
+.cm-editor .cm-header-6 {
+  color: var(--h6-color) !important;
+  font-size: var(--h6-size) !important;
+  font-weight: var(--h6-weight) !important;
+}
+.markdown-preview-view .HyperMD-header-6,
+.cm-editor .HyperMD-header-6 {
+  padding: 4px 0 !important;
+  line-height: calc(var(--h6-size) * 1.4);
+}
+.is-live-preview .HyperMD-header-6,
+.workspace-leaf-content[data-type="markdown"] h6 {
+  position: relative;
+  margin: calc(var(--h6-size) / 3) 0;
+}
+.is-live-preview .HyperMD-header-6::before,
+.workspace-leaf-content[data-type="markdown"] h6::before {
+  position: absolute;
+  border: 2px solid var(--h6-color);
+  border-radius: 4px;
+  z-index: 1;
+  padding-top: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: 0.6rem;
+  font-weight: var(--font-bold);
+  height: 0.6rem;
+  line-height: 0.6rem;
+  content: "H6";
+  opacity: 0;
+  transition: var(--transition);
+  top: 48%;
+  transform: translateY(-50%);
+  left: -20px;
+}
+.is-live-preview .HyperMD-header-6:hover::before,
+.workspace-leaf-content[data-type="markdown"] h6:hover::before {
+  transition: var(--transition);
+  opacity: 0.8;
+}
+
+.is-live-preview .HyperMD-header-6 {
+  padding-left: 4px !important;
+}
+
+.theme-light .is-live-preview .HyperMD-header-6::before,
+.theme-light .workspace-leaf-content[data-type="markdown"] h6::before {
+  color: var(--h6-color);
+}
+
+.theme-dark .is-live-preview .HyperMD-header-6::before,
+.theme-dark .workspace-leaf-content[data-type="markdown"] h6::before {
+  background-color: var(--h6-color);
+  color: #fff;
+}
+
+.heading-collapse-indicator {
+  position: absolute;
+  z-index: 99;
+  height: 16px;
+  width: 18px;
+  top: 9px;
+  left: 10px;
+  padding: 0 !important;
+}
+.heading-collapse-indicator svg {
+  display: none;
+}
+
+.HyperMD-header {
+  position: relative;
+}
+.HyperMD-header .cm-fold-indicator .collapse-indicator {
+  z-index: 99;
+  opacity: 0 !important;
+  width: 24px;
+  height: 14px !important;
+  padding-right: 6px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.cm-editor .cm-line .cm-formatting-header {
+  filter: grayscale(70%);
+  font-size: 1rem !important;
+  font-family: var(--font-monospace);
+  font-weight: 400 !important;
+  line-height: 1.2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2,
+.HyperMD-header-2 {
+  position: relative;
+}
+h2::after,
+.HyperMD-header-2::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    var(--h2-color) 40%,
+    transparent 60%
+  );
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  border-radius: 99px;
+}
+
+.HyperMD-header-2::after {
+  bottom: 4px;
+  left: 4px;
+}
+
+.modal-container h2::after {
+  content: none;
+}
+
+.cm-header-6,
+h6 {
+  font-variant: small-caps;
 }
