@@ -9,3 +9,9 @@
 
 ## Java
 - [[Learning/性能优化/Java接口优化\|Java接口优化]]
+
+## 工具
+- [[Tools/汇总\|汇总]]
+
+## 电影
+- [[Movie Notes/000-Movie Gallery\|000-Movie Gallery]]
