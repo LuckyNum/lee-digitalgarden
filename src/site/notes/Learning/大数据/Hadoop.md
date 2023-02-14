@@ -45,5 +45,5 @@ Hadoop形成一套完善的大数据生态系统
 
 ## 核心组件
 - [[Learning/大数据/HDFS\|HDFS]]负责海量数据存储，[[分布式存储\|分布式存储]]
-- [[Inbox/MapReduce\|MapReduce]]是计算模型，负责海量数据的[[分布式计算\|分布式计算]]
+- [[Learning/大数据/MapReduce\|MapReduce]]是计算模型，负责海量数据的[[分布式计算\|分布式计算]]
 - [[Learning/大数据/YARN\|YARN]]主要负责集群资源的管理和调度
