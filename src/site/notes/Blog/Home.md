@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/Blog/Home/","tags":"gardenEntry"}
+{"dg-publish":true,"permalink":"/Blog/Home/","tags":["gardenEntry"]}
 ---
 
 ## 大数据
